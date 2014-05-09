@@ -5,6 +5,11 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    respond_to do |format|
+      format.html { }
+      format.json { render json: @posts }
+      format.xml  { render xml: "<foo>We dont do that stuff here</foo>" }
+    end
   end
 
   # GET /posts/1
