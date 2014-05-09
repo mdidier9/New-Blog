@@ -1,4 +1,6 @@
 Blog::Application.routes.draw do
+  resources :comments
+
   resources :posts do
     collection do
       get 'recent'
