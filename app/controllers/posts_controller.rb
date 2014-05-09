@@ -66,6 +66,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def recent
+    @posts = Post.last_posts(3)
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
