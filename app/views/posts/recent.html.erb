@@ -1,5 +1,9 @@
+<h1>Welcome to My Blog</h1>
+
+<h3>All Posts</h3>	
+
 <% @posts.each do |post| %>
-  <%= post.title %><br>
+  <%= link_to post.title, post %><br>
   <%= post.content %>
   <hr>
 <% end %>
